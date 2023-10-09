@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  webdav:
+    image: micromata/dave:latest
+    ports:
+      - "8000:8000"
+    volumes:
+      - ~/code/webdav-home:/tmp:rw
+      - type: bind
+        source: ./webdav-config.yml
+        target: /home/dave/.dave/config.yaml
+        read_only: true

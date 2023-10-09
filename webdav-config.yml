@@ -1,0 +1,10 @@
+address: "127.0.0.1"    # the bind address
+port: "8000"            # the listening port
+dir: "/tmp"     # the provided base dir
+prefix: "/webdav"       # the url-prefix of the original url
+users:
+  nas:                 # with password 'foo' and jailed access to '/home/webdav/nas'
+    password: ""
+    subdir: "/nas"
+  admin:                # with password 'foo' and access to '/home/webdav'
+    password: "admin"
